@@ -3,7 +3,7 @@ function generatePassword() {
   var promptPassword = window.prompt("How long do you want your password to be? Your password must be between 8 and 128 characters long.")
   var passwordLength = parseInt(promptPassword);
 
-  if (passwordLength === "" || passwordLength === null) {
+  if (promptPassword === "" || promptPassword === null) {
     window.alert("You need to provide a valid answer! Please try again.");
     return generatePassword();
   }
@@ -54,6 +54,17 @@ function generatePassword() {
     window.alert("Your password must include at least one type of character! Please try again.");
     return generatePassword();
   }
+
+  var mergeArrays = [].concat.apply([], characterTypes);
+
+  var password = "";
+
+  for (var i = 0; i < passwordLength; i++) {
+    var randomNumber = Math.floor(Math.random() * mergeArrays.length);
+    password = password + mergeArrays[randomNumber];
+  }
+
+  return password;
 }
 
 // Get references to the #generate element
