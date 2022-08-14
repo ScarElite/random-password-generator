@@ -17,7 +17,7 @@ Choosing a low length password and choosing all of the character types may resul
 https://scarelite.github.io/random-password-generator/
 
 ## Here's a preview of the website!
-
+![](assets/images/password-generator-home.PNG)
 
 
 ## Contribution: 
